@@ -12,7 +12,7 @@ function Navigation() {
 
   return (
     <>
-      <nav className="flex px-10 lg:px-[10%] md:px-[5%] justify-between items-center h-16 bg-white">
+      <nav className="flex px-10 lg:px-[10%] md:px-[5%] justify-between items-center h-16 bg-white fixed z-10 w-full">
         <div className=" w-1/2 md:w-1/4 xl:w-1/3">
           <img src={logo} alt="logo" />
         </div>
@@ -37,7 +37,7 @@ function Navigation() {
 
       {/* Mobile menu items */}
       {menuOpen && (
-        <div className="absolute h-[calc(100svh-64px)] top-16 right-0 w-2/3 bg-white/30 backdrop-blur-sm flex flex-col items-center gap-12 py-4 md:hidden">
+        <div className="h-[calc(100svh-64px)] top-16 right-0 w-2/3 bg-white/30 backdrop-blur-2xl flex flex-col items-center gap-12 py-4 md:hidden z-10 fixed">
           <ul className="flex flex-col gap-4">
             <MenuItems />
           </ul>
@@ -54,7 +54,7 @@ function MenuItems() {
       {["Home", "About", "Contact", "Blog", "Careers"].map((item) => (
         <li
           key={item}
-          className="relative px-2 text-neutral-grayish-blue text-base md:text-lg lg:text-xl hover:text-black hover:cursor-pointer h-full flex items-center group"
+          className="relative px-2 sm:text-neutral-grayish-blue text-base md:text-lg lg:text-xl hover:text-black hover:cursor-pointer h-full flex items-center group"
         >
           <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-lime-green to-bright-cyan h-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
           {item}
@@ -66,7 +66,7 @@ function MenuItems() {
 
 function Button({ text }) {
   return (
-    <button className="border-2 py-2 px-4 rounded-3xl bg-gradient-to-r from-lime-green to-bright-cyan hover:opacity-60 text-neutral-light-grayish-blue">
+    <button className="py-2 px-4 rounded-3xl bg-gradient-to-r from-lime-green to-bright-cyan hover:opacity-60 text-neutral-light-grayish-blue">
       {text}
     </button>
   );
