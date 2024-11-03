@@ -7,3 +7,7 @@
 body {
     @apply font-sans
 }
+
+.hoverEffect {
+    @apply text-neutral-light-grayish-blue hover:text-lime-green cursor-pointer
+}
