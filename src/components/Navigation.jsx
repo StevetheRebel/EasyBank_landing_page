@@ -37,7 +37,7 @@ function Navigation() {
 
       {/* Mobile menu items */}
       {menuOpen && (
-        <div className="h-[calc(100svh-64px)] top-16 right-0 w-full bg-slate-400/40 flex flex-col items-center gap-12 py-4 md:hidden z-10 fixed">
+        <div className="h-[calc(100dvh-64px)] top-16 right-0 w-full bg-slate-400/40 flex flex-col items-center gap-12 py-4 md:hidden z-10 fixed">
           <ul className="flex flex-col gap-4 items-center bg-neutral-white w-5/6 py-8 rounded-md">
             <MenuItems />
           </ul>
